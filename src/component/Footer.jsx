@@ -1,45 +1,64 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
     return (
-        <><div className='bg-[#6B4C3B] text-white py-5'>
-            <div className='container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto py-5'>
-                {/* Grid 1 (Tetap di atas) */}
-                <div className="flex px-20">
-                    <ul>
-                        <li className="text-5xl font-bold flex items-end">
-                            <img src="/Logo R 3.png" height="60" width="60" alt="" />
-                            entoria
-                        </li>
-                        <li className="text-lg leading-9">Jl. Raya Bogor, Jakarta</li>
-                        <li className="text-lg leading-9">Indonesia</li>
-                    </ul>
-                </div>
+        <footer className="bg-black text-white py-10 overflow-hidden">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    {/* Logo & Description */}
+                    <div className="flex flex-col items-center sm:items-start">
+                        <div className="flex items-center space-x-2">
+                            <img src="/Logo R 3.png" height="50" width="50" alt="Logo" />
+                            <h2 className="text-2xl font-bold text-[#D4FF00]">Rentoria</h2>
+                        </div>
+                        <p className="text-gray-400 mt-4 text-center sm:text-left text-sm md:text-base">
+                            Sewa konsol game favoritmu mulai dari PS4, PS5 hingga Nintendo Switch. Main hemat, seru maksimal!
+                        </p>
+                        {/* Social Media Icons */}
+                        <div className="flex space-x-4 mt-4 justify-center sm:justify-start">
+                            <a href="#" className="text-gray-400 hover:text-[#D4FF00]" title="Facebook">
+                                <i className="fab fa-facebook-square text-xl"></i>
+                            </a>
+                            <a href="#" className="text-gray-400 hover:text-[#D4FF00]" title="Instagram">
+                                <i className="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" className="text-gray-400 hover:text-[#D4FF00]" title="WhatsApp">
+                                <i className="fab fa-whatsapp text-xl"></i>
+                            </a>
+                            <a href="#" className="text-gray-400 hover:text-[#D4FF00]" title="YouTube">
+                                <i className="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
 
-                {/* Grid 2 (Diturunkan) */}
-                <div className='flex px-20 py-8'>
-                    <ul>
-                        <li className='text-3xl font-bold  leading-9'>Tentang Kami</li>
-                        <li className='text-lg leading-9'>Syarat & Ketentuan</li>
-                        <li className='text-lg leading-9'>Kebijakan Pengembalian</li>
-                        <li className='text-lg leading-9'>FAQ</li>
-                    </ul>
-                </div>
+                    {/* Navigation - Rental Info */}
+                    <div className="mt-6 sm:mt-0">
+                        <h3 className="text-xl font-bold text-white text-center sm:text-left">Rental</h3>
+                        <ul className="mt-4 space-y-2 text-gray-400 text-center sm:text-left">
+                            <li><a href="/belanja" className="hover:text-[#D4FF00]">Daftar Konsol</a></li>
+                            <li><a href="/procedur" className="hover:text-[#D4FF00]">Cara Sewa</a></li>
+                        </ul>
+                    </div>
 
-                {/* Grid 3 (Diturunkan) */}
-                <div className='flex py-8 '>
-                    <ul>
-                        <li className='text-3xl font-bold leading-9'>Hubungi Kami</li>
-                        <li className='text-lg leading-9'>Instagram:</li>
-                        <a href='https://www.instagram.com/' className='text-lg leading-9'>@rentoria</a>
-                    </ul>
+                    {/* Navigation - Support */}
+                    <div className="mt-6 md:mt-0">
+                        <h3 className="text-xl font-bold text-white text-center sm:text-left">Bantuan</h3>
+                        <ul className="mt-4 space-y-2 text-gray-400 text-center sm:text-left">
+                            <li><a href="#" className="hover:text-[#D4FF00]">FAQ</a></li>
+                            <li><a href="#" className="hover:text-[#D4FF00]">Syarat & Ketentuan</a></li>
+                            <li><a href="#" className="hover:text-[#D4FF00]">Kebijakan Privasi</a></li>
+                            <li><a href="#" className="hover:text-[#D4FF00]">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div className='bg-white py-2 text-black flex justify-center'> © Copyright 2025 - Rentoria</div>
 
-        </>
-    )
-}
+            {/* Copyright */}
+            <div className="text-center text-gray-500 mt-10 text-sm">
+                © {new Date().getFullYear()} Rentoria - Rental Konsol Game
+            </div>
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;

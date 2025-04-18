@@ -1,13 +1,15 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-import Routers from './routes/section'
+import React from 'react';
+import { ToastContainer } from "react-toastify";
+import Routers from './routes/section';
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <>
-    <Routers/>
+      <Routers />
+      <ToastContainer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
